@@ -1,0 +1,32 @@
+:root {
+  /* ---- Families ---- */
+  --font-heading: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body:    'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Weights ---- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ---- Type scale (display → caption) ---- */
+  --text-display:  4rem;    /* 64px — hero */
+  --text-h1:       2.75rem; /* 44px */
+  --text-h2:       2.125rem;/* 34px */
+  --text-h3:       1.5rem;  /* 24px */
+  --text-h4:       1.25rem; /* 20px */
+  --text-lg:       1.125rem;/* 18px */
+  --text-base:     1rem;    /* 16px */
+  --text-sm:       0.875rem;/* 14px */
+  --text-xs:       0.75rem; /* 12px */
+
+  /* ---- Line heights ---- */
+  --leading-tight:  1.08;  /* serif display */
+  --leading-snug:   1.25;
+  --leading-normal: 1.65;  /* body reading */
+
+  /* ---- Letter spacing ---- */
+  --tracking-tight: -0.02em; /* Fraunces display */
+  --tracking-normal: 0;
+  --tracking-wide:  0.16em;   /* eyebrow / overline uppercase */
+}

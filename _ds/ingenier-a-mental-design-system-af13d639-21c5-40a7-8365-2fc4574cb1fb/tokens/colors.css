@@ -1,0 +1,109 @@
+:root {
+  /* ============================================================
+     INGENIERÍA MENTAL — DARK PREMIUM
+     Dark base, light & energy as glow accents.
+     "Tu cuerpo emite luz" — teal = energía, ámbar = luz cálida.
+     ============================================================ */
+
+  /* ---- Energy (teal) ---- */
+  --im-teal:        #147C8E; /* base brand teal */
+  --im-teal-deep:   #0F6473; /* pressed on light */
+  --im-teal-bright: #5FC6D6; /* accents / links on dark */
+  --im-teal-glow:   #74D5E4; /* brightest glow highlight */
+
+  /* ---- Warm light (amber) — use SPARINGLY ---- */
+  --im-amber:        #F4A862; /* accent text / highlight on dark */
+  --im-amber-cta-1:  #E2842F; /* CTA gradient start */
+  --im-amber-cta-2:  #F4AC62; /* CTA gradient end */
+  --im-amber-deep:   #C96F22; /* pressed */
+
+  /* ---- Dark surfaces ---- */
+  --im-bg:        #0A0D12; /* page base */
+  --im-surface-1: #12161D; /* raised */
+  --im-surface-2: #171C24; /* cards */
+  --im-surface-3: #1E242E; /* hover / inset */
+
+  /* ---- Dark text ---- */
+  --im-text:  #F7F9FB; /* primary */
+  --im-body:  #C2CAD2; /* body — min contrast on dark */
+  --im-muted: #9AA2AB; /* muted / captions */
+
+  /* ---- Light reading palette (for [data-surface="reading"]) ---- */
+  --im-paper:    #FBF9F5; /* warm reading page */
+  --im-paper-2:  #FFFFFF; /* reading card */
+  --im-paper-3:  #F3EFE8; /* reading inset */
+  --im-ink:      #1A1F26; /* reading primary text */
+  --im-ink-body: #3C444E; /* reading body */
+  --im-ink-muted:#6B7480; /* reading muted */
+  --im-paper-line: #E7E1D7;
+
+  /* ---- Borders (white alpha on dark) ---- */
+  --im-line:        rgba(255, 255, 255, 0.12);
+  --im-line-strong: rgba(255, 255, 255, 0.28);
+  --im-line-soft:   rgba(255, 255, 255, 0.07);
+
+  /* ---- Status ---- */
+  --im-success: #3FB985;
+  --im-warning: #E8A413;
+  --im-danger:  #E5736F;
+
+  /* ============================================================
+     SEMANTIC ALIASES — dark by default
+     ============================================================ */
+  --gradient-cta:        linear-gradient(135deg, var(--im-amber-cta-1), var(--im-amber-cta-2));
+  --gradient-energy:     linear-gradient(135deg, var(--im-teal), var(--im-teal-bright));
+  --color-primary:       var(--im-amber-cta-1);
+  --color-primary-hover: var(--im-amber-deep);
+  --color-secondary:     var(--im-teal-bright);
+  --color-secondary-hover:var(--im-teal-glow);
+
+  --text-strong:    var(--im-text);
+  --text-body:      var(--im-body);
+  --text-muted:     var(--im-muted);
+  --text-accent:    var(--im-amber);
+  --text-energy:    var(--im-teal-bright);
+  --text-on-accent: #1A1206; /* dark ink on amber CTA */
+  --text-on-teal:   #04181C;
+
+  --surface-page:        var(--im-bg);
+  --surface-card:        var(--im-surface-2);
+  --surface-raised:      var(--im-surface-1);
+  --surface-inset:       var(--im-surface-3);
+  --surface-tint-teal:   rgba(95, 198, 214, 0.10);
+  --surface-tint-amber:  rgba(244, 168, 98, 0.12);
+
+  --border-default: var(--im-line);
+  --border-soft:    var(--im-line-soft);
+  --border-strong:  var(--im-line-strong);
+}
+
+/* ============================================================
+   LIGHT READING SCOPE
+   Apply data-surface="reading" to long-form / lesson / article
+   regions so reading isn't tiring. Overrides the semantic aliases.
+   ============================================================ */
+[data-surface="reading"] {
+  --color-primary:       var(--im-amber-cta-1);
+  --color-primary-hover: var(--im-amber-deep);
+  --color-secondary:     var(--im-teal);
+  --color-secondary-hover:var(--im-teal-deep);
+
+  --text-strong:    var(--im-ink);
+  --text-body:      var(--im-ink-body);
+  --text-muted:     var(--im-ink-muted);
+  --text-accent:    var(--im-amber-deep);
+  --text-energy:    var(--im-teal-deep);
+  --text-on-accent: #FFFFFF;
+  --text-on-teal:   #FFFFFF;
+
+  --surface-page:        var(--im-paper);
+  --surface-card:        var(--im-paper-2);
+  --surface-raised:      var(--im-paper-2);
+  --surface-inset:       var(--im-paper-3);
+  --surface-tint-teal:   #E6F4F6;
+  --surface-tint-amber:  #FCEFE0;
+
+  --border-default: var(--im-paper-line);
+  --border-soft:    #F0ECE4;
+  --border-strong:  #DAD2C5;
+}

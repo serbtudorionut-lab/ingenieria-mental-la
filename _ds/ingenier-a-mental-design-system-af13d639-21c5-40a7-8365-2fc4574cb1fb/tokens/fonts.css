@@ -1,0 +1,4 @@
+/* Webfonts — Fraunces (headings, elegant serif) + Inter (body).
+   Loaded from Google Fonts CDN. If you have licensed font binaries,
+   replace these @import lines with local @font-face rules pointing at them. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
