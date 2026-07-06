@@ -823,11 +823,11 @@ class Cones extends THREE.Object3D{
     this._material.customUniforms[13].value+=(i-this._material.customUniforms[13].value)*this._easing;
     this._simulationPos.material.uniforms.u_explode.value+=(i-this._simulationPos.material.uniforms.u_explode.value)*this._easing;
     this._simulationSpring.material.uniforms.u_explode.value+=(i-this._simulationSpring.material.uniforms.u_explode.value)*this._easing;
-    const r=this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3)-zt(Ut(e,4,4.6,0,1),0,1);
+    const r=(this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3))*(1-zt(Ut(e,4.15,4.6,0,1),0,1));
     this._material.customUniforms[3].value+=(r-this._material.customUniforms[3].value)*this._easing;
     this._simulationPos.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
     this._simulationSpring.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
-    const o=zt(Ut(e,1.8,2.2,0,2),0,2)+zt(Ut(e,4,4.6,0,1),0,1);
+    const o=zt(Ut(e,1.8,2.2,0,2),0,2);
     this._material.customUniforms[14].value+=(o-this._material.customUniforms[14].value)*this._easing;
     this._simulationPos.material.uniforms.u_progress.value+=(o-this._simulationPos.material.uniforms.u_progress.value)*this._easing;
     this._simulationSpring.material.uniforms.u_progress.value+=(o-this._simulationSpring.material.uniforms.u_progress.value)*this._easing;
