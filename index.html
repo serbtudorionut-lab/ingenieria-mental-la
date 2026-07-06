@@ -47,7 +47,7 @@
   <section id="top" data-screen-label="Hero" style="position:relative;">
     <div style="position:absolute; top:-160px; right:-120px; width:680px; height:680px; border-radius:50%; background:radial-gradient(circle, rgba(20,124,142,0.32), transparent 62%); pointer-events:none;"></div>
     <div style="position:absolute; top:140px; left:-180px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(244,168,98,0.10), transparent 62%); pointer-events:none;"></div>
-    <div class="im-grid" style="position:relative; max-width:none; margin:0 auto; padding:var(--space-7) 5vw; min-height:calc(100vh - 70px); box-sizing:border-box; display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-7); align-items:center;">
+    <div class="im-grid" style="position:relative; max-width:none; margin:0 auto; padding:var(--space-7) max(5vw, calc((100vw - var(--container-max))/2 - 80px)); min-height:calc(100vh - 70px); box-sizing:border-box; display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-7); align-items:center;">
       <div style="animation:im-fade-up 0.8s var(--ease-out) both;">
         <span style="display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:13px; letter-spacing:var(--tracking-wide); text-transform:uppercase; color:var(--text-energy);">Bioenergética con base científica</span>
         <h1 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-display); line-height:var(--leading-tight); letter-spacing:var(--tracking-tight); color:var(--text-strong); margin:18px 0 0;">Tu cuerpo emite luz.<br>Aprende a <em style="font-style:italic; color:var(--text-accent);">afinarla</em>.</h1>
@@ -824,11 +824,11 @@ class Cones extends THREE.Object3D{
     this._material.customUniforms[13].value+=(i-this._material.customUniforms[13].value)*this._easing;
     this._simulationPos.material.uniforms.u_explode.value+=(i-this._simulationPos.material.uniforms.u_explode.value)*this._easing;
     this._simulationSpring.material.uniforms.u_explode.value+=(i-this._simulationSpring.material.uniforms.u_explode.value)*this._easing;
-    const r=this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3)-zt(Ut(e,4,4.6,0,.35),0,.35);
+    const r=this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3)-zt(Ut(e,4,4.6,0,.3),0,.3);
     this._material.customUniforms[3].value+=(r-this._material.customUniforms[3].value)*this._easing;
     this._simulationPos.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
     this._simulationSpring.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
-    const o=zt(Ut(e,1.8,2.2,0,2),0,2);
+    const o=zt(Ut(e,1.8,2.2,0,2),0,2)-zt(Ut(e,4,4.6,0,1),0,1);
     this._material.customUniforms[14].value+=(o-this._material.customUniforms[14].value)*this._easing;
     this._simulationPos.material.uniforms.u_progress.value+=(o-this._simulationPos.material.uniforms.u_progress.value)*this._easing;
     this._simulationSpring.material.uniforms.u_progress.value+=(o-this._simulationSpring.material.uniforms.u_progress.value)*this._easing;
