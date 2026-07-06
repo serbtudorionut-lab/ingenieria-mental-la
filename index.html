@@ -43,26 +43,14 @@
     </div>
   </header>
 
-  <!-- ============ 1. HERO (split 1/2) ============ -->
+  <!-- ============ 1. HERO (text original complet) ============ -->
   <section id="top" data-screen-label="Hero" style="position:relative;">
     <div style="position:absolute; top:-160px; right:-120px; width:680px; height:680px; border-radius:50%; background:radial-gradient(circle, rgba(20,124,142,0.32), transparent 62%); pointer-events:none;"></div>
     <div style="position:absolute; top:140px; left:-180px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(244,168,98,0.10), transparent 62%); pointer-events:none;"></div>
-    <div class="im-grid" style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-7) var(--space-5); min-height:calc(100vh - 70px); box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-7); align-items:center;">
-      <div style="animation:im-fade-up 0.8s var(--ease-out) both; max-width:560px;">
+    <div class="im-grid" style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-7) var(--space-5); min-height:calc(100vh - 70px); box-sizing:border-box; display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-7); align-items:center;">
+      <div style="animation:im-fade-up 0.8s var(--ease-out) both;">
         <span style="display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:13px; letter-spacing:var(--tracking-wide); text-transform:uppercase; color:var(--text-energy);">Bioenergética con base científica</span>
         <h1 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-display); line-height:var(--leading-tight); letter-spacing:var(--tracking-tight); color:var(--text-strong); margin:18px 0 0;">Tu cuerpo emite luz.<br>Aprende a <em style="font-style:italic; color:var(--text-accent);">afinarla</em>.</h1>
-      </div>
-      <div style="display:flex; justify-content:center; position:relative;">
-        <div id="im-hero-anchor" style="position:relative; width:420px; height:420px;"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 1b. HERO partea 2 (text dreapta, creier stanga) ============ -->
-  <section id="im-hero2" data-reveal style="position:relative;">
-    <div class="im-grid" style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-7) var(--space-5); min-height:92vh; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-7); align-items:center;">
-      <div class="im-spacer" aria-hidden="true"></div>
-      <div style="max-width:560px; justify-self:end;">
         <p style="font-size:var(--text-lg); color:var(--text-body); line-height:var(--leading-normal); margin:22px 0 14px; max-width:520px;">En Ingeniería Mental unimos formación y tecnología de biorresonancia para que aprendas a optimizar tu salud energética con método, criterio y base científica.</p>
         <div style="display:flex; gap:14px; margin-top:18px; flex-wrap:wrap;">
           <a href="#dispositivo" style="text-decoration:none;"><x-import component-from-global-scope="IngenierAMentalDesignSystem_af13d6.Button" variant="primary" size="lg" hint-size="auto,52px">Descubrir el dispositivo</x-import></a>
@@ -73,37 +61,35 @@
           <span><strong style="color:var(--text-strong); font-weight:600; font-family:var(--font-heading);">4,9/5</strong> · +2.400 personas afinando su energía</span>
         </div>
       </div>
+      <div style="display:flex; justify-content:center; position:relative;">
+        <div id="im-hero-anchor" style="position:relative; width:420px; height:420px;"></div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ 2. TRUST / POSITIONING STRIP ============ -->
-  <section data-reveal style="border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); background:var(--im-surface-1);">
-    <div style="max-width:var(--container-max); margin:0 auto; padding:var(--space-5) var(--space-5); display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; text-align:center;">
-      <span style="color:var(--text-muted); font-size:13px; letter-spacing:var(--tracking-wide); text-transform:uppercase; white-space:nowrap;">Entre dos extremos</span>
-      <span style="font-family:var(--font-heading); font-size:var(--text-h4); color:var(--text-body); line-height:1.4;">Ni clínica fría, ni misticismo cuántico — <em style="font-style:italic; color:var(--im-teal-bright);">rigor científico, sin promesas mágicas</em>.</span>
+  <!-- ============ 1b. HERO partea 2 (lorem dreapta, creier stanga) ============ -->
+  <section id="im-hero2" data-reveal style="position:relative;">
+    <div class="im-grid" style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-7) var(--space-5); min-height:92vh; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-7); align-items:center;">
+      <div class="im-spacer" aria-hidden="true"></div>
+      <div style="max-width:560px; justify-self:end;">
+        <h3 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-h3); color:var(--text-strong); margin:0 0 14px; letter-spacing:var(--tracking-tight);">Lorem ipsum dolor sit amet</h3>
+        <p style="color:var(--text-body); line-height:var(--leading-normal); margin:0 0 12px; max-width:520px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p style="color:var(--text-muted); line-height:var(--leading-normal); margin:0; max-width:520px; font-size:15px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+      </div>
     </div>
   </section>
 
-  <div id="im-dissolve" aria-hidden="true" style="height:110vh"></div>
+  <!-- tranzitie: dezintegrarea creierului (norul ramane vizibil) -->
+  <div id="im-dissolve" aria-hidden="true" style="height:85vh"></div>
 
-  <!-- ============ 3. THE DEVICE (split 1/2) ============ -->
-  <section id="dispositivo" data-screen-label="Dispositivo" data-reveal style="max-width:var(--container-max); margin:var(--space-8) auto 0; padding:0 var(--space-5);">
-    <div class="im-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8); align-items:center; min-height:92vh;">
-      <div style="max-width:560px;">
+  
+  <!-- ============ 3. THE DEVICE (copy original + lorem) ============ -->
+  <section id="dispositivo" data-screen-label="Dispositivo" data-reveal style="max-width:var(--container-max); margin:var(--space-7) auto 0; padding:0 var(--space-5);">
+    <div class="im-grid" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-8); align-items:center; min-height:100vh;">
+      <div>
         <x-import component-from-global-scope="IngenierAMentalDesignSystem_af13d6.Badge" tone="teal" hint-size="auto,26px">Producto estrella</x-import>
         <h2 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-h2); color:var(--text-strong); margin:16px 0 14px; letter-spacing:var(--tracking-tight);">El Cell Oscillator</h2>
         <p style="color:var(--text-body); line-height:var(--leading-normal); margin:0 0 14px; max-width:520px;">Un dispositivo de uso doméstico que combina <strong style="color:var(--text-strong); font-weight:600;">campos electromagnéticos pulsados (PEMF)</strong>, biofotones y frecuencias programables. Te sientas, eliges un programa y dejas que trabaje: una sesión dura entre <strong style="color:var(--text-strong); font-weight:600;">10 y 25 minutos</strong>. Sin ruido, sin esfuerzo, con parámetros que puedes medir.</p>
-      </div>
-      <div style="position:relative; display:flex; justify-content:center;">
-        <div style="position:absolute; inset:0; background:radial-gradient(circle at 50% 50%, rgba(20,124,142,0.22), transparent 65%); pointer-events:none;"></div>
-        <div id="im-osc-anchor" style="position:relative; width:320px; height:380px;"></div>
-      </div>
-    </div>
-    <div class="im-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8); align-items:center; min-height:92vh;">
-      <div style="position:relative; display:flex; justify-content:center;">
-        <div id="im-osc-anchor2" style="position:relative; width:320px; height:380px;"></div>
-      </div>
-      <div style="max-width:560px; justify-self:end;">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:24px 0 26px;">
           <div style="padding:16px; border-radius:var(--radius-md); background:var(--surface-card); border:1px solid var(--border-default);">
             <div style="font-family:var(--font-heading); font-weight:600; color:var(--im-teal-bright); font-size:var(--text-h4); margin-bottom:4px;">Energía</div>
@@ -128,10 +114,30 @@
         </div>
         <p style="margin:18px 0 0; font-size:13px; color:var(--text-muted); max-width:460px;">No es un producto sanitario y no sustituye al consejo médico. Es una herramienta de bienestar para acompañar tus hábitos.</p>
       </div>
+      <div style="position:relative; display:flex; justify-content:center;">
+        <div style="position:absolute; inset:0; background:radial-gradient(circle at 50% 50%, rgba(20,124,142,0.22), transparent 65%); pointer-events:none;"></div>
+        <div id="im-osc-anchor" style="position:relative; width:320px; height:380px;"></div>
+      </div>
+    </div>
+    <div class="im-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8); align-items:center; min-height:92vh;">
+      <div style="position:relative; display:flex; justify-content:center;">
+        <div id="im-osc-anchor2" style="position:relative; width:320px; height:380px;"></div>
+      </div>
+      <div style="max-width:560px; justify-self:end;">
+        <h3 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-h3); color:var(--text-strong); margin:0 0 14px; letter-spacing:var(--tracking-tight);">Lorem ipsum consectetur</h3>
+        <p style="color:var(--text-body); line-height:var(--leading-normal); margin:0 0 12px; max-width:520px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p style="color:var(--text-muted); line-height:var(--leading-normal); margin:0; max-width:520px; font-size:15px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+      </div>
     </div>
   </section>
 
-  <div id="im-dissolve2" aria-hidden="true" style="height:80vh"></div>
+  <!-- ============ 2. TRUST / POSITIONING STRIP ============ -->
+  <section data-reveal style="border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); background:var(--im-surface-1);">
+    <div style="max-width:var(--container-max); margin:0 auto; padding:var(--space-5) var(--space-5); display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; text-align:center;">
+      <span style="color:var(--text-muted); font-size:13px; letter-spacing:var(--tracking-wide); text-transform:uppercase; white-space:nowrap;">Entre dos extremos</span>
+      <span style="font-family:var(--font-heading); font-size:var(--text-h4); color:var(--text-body); line-height:1.4;">Ni clínica fría, ni misticismo cuántico — <em style="font-style:italic; color:var(--im-teal-bright);">rigor científico, sin promesas mágicas</em>.</span>
+    </div>
+  </section>
 
   <!-- ============ 4. THE SCIENCE ============ -->
   <section id="ciencia" data-screen-label="Ciencia" data-reveal style="max-width:var(--container-max); margin:var(--space-9) auto 0; padding:0 var(--space-5);">
@@ -370,8 +376,7 @@ class Component extends DCLogic {
   .im-spacer{height:46vh}
   #im-hero-anchor{width:100% !important;height:50vh !important}
   #im-osc-anchor,#im-osc-anchor2{width:100% !important;height:44vh !important}
-  #im-dissolve{height:70vh !important}
-  #im-dissolve2{height:55vh !important}
+  #im-dissolve{height:60vh !important}
   .im-grid h1{font-size:clamp(1.9rem,8vw,2.6rem) !important}
   section [style*="grid-template-columns:repeat(3,1fr)"]{display:flex !important;flex-direction:column !important;gap:20px !important}
 }
@@ -392,7 +397,7 @@ class Component extends DCLogic {
 <script>
 
 (function(){
-  var vh = window.innerHeight, P1 = 1.4, Pd = 2.6, P2 = 3.6, P3 = 4.7, C2 = 5.7;
+  var vh = window.innerHeight, P1 = 1.4, Pd = 2.4, P2 = 3.4, P3 = 4.5, C2 = 5.3;
   function cp(id){
     var el = document.getElementById(id);
     if(!el) return null;
@@ -401,12 +406,12 @@ class Component extends DCLogic {
   }
   function calc(){
     vh = window.innerHeight;
-    var a = cp('im-hero2'), d = cp('im-dissolve'), b = cp('im-osc-anchor'), c = cp('im-osc-anchor2'), f = cp('im-dissolve2');
+    var a = cp('im-hero2'), d = cp('im-dissolve'), b = cp('im-osc-anchor'), c = cp('im-osc-anchor2');
     if(a !== null) P1 = Math.max(a, 0.6);
-    if(d !== null) Pd = Math.max(d, P1 + 0.9);
-    if(b !== null) P2 = Math.max(b, Pd + 0.7);
+    if(d !== null) Pd = Math.max(d, P1 + 0.8);
+    if(b !== null) P2 = Math.max(b, Pd + 0.6);
     if(c !== null) P3 = Math.max(c, P2 + 0.6);
-    C2 = (f !== null) ? Math.max(f, P3 + 0.6) : P3 + 0.9;
+    C2 = P3 + 0.8;
   }
   calc();
   window.addEventListener('resize', calc, {passive:true});
@@ -414,34 +419,19 @@ class Component extends DCLogic {
   setTimeout(calc, 2000);
   function seg(p,a,b,ea,eb){ return ea + (p-a)/(b-a)*(eb-ea); }
   window.__imMapE = function(p){
-    var B1 = Math.max(P2 - 0.55, Pd + 0.05);
+    var B1 = Math.max(P2 - 0.35, Pd + 0.05);
     if(p <= 0) return 0;
     if(p < P1) return seg(p, 0, P1, 0, 1);
-    if(p < P1 + 0.25) return 1;
-    if(p < Pd) return seg(p, P1 + 0.25, Pd, 1, 2);
+    if(p < P1 + 0.2) return 1;
+    if(p < Pd) return seg(p, P1 + 0.2, Pd, 1, 2);
     if(p < B1) return seg(p, Pd, B1, 2, 2.2);
     if(p < P2) return seg(p, B1, P2, 2.2, 2.6);
-    if(p < P2 + 0.3) return 2.6;
-    if(p < P3) return seg(p, P2 + 0.3, P3, 2.6, 3.6);
+    if(p < P2 + 0.25) return 2.6;
+    if(p < P3) return seg(p, P2 + 0.25, P3, 2.6, 3.6);
     if(p < P3 + 0.2) return 3.6;
     if(p < C2) return seg(p, P3 + 0.2, C2, 3.6, 4.6);
     return 4.6;
   };
-  function cl(x){ return Math.min(Math.max(x, 0), 1); }
-  var cv = document.getElementById('canvas');
-  function tick(){
-    var p = window.scrollY/vh;
-    var B1 = Math.max(P2 - 0.55, Pd + 0.05);
-    var o = 1;
-    o -= cl((p - (Pd - 0.35))/0.35);   // dispare dupa dezintegrarea creierului
-    o += cl((p - B1)/0.4);             // reapare pentru oscilator
-    o -= cl((p - (C2 - 0.35))/0.35);   // dispare dupa dizolvarea oscilatorului
-    o = cl(o);
-    cv.style.opacity = o;
-    cv.style.visibility = o <= 0 ? 'hidden' : 'visible';
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
 })();
 
 /* Dala brain — faithful 1:1 port (three r128) */
