@@ -47,7 +47,7 @@
   <section id="top" data-screen-label="Hero" style="position:relative;">
     <div style="position:absolute; top:-160px; right:-120px; width:680px; height:680px; border-radius:50%; background:radial-gradient(circle, rgba(20,124,142,0.32), transparent 62%); pointer-events:none;"></div>
     <div style="position:absolute; top:140px; left:-180px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(244,168,98,0.10), transparent 62%); pointer-events:none;"></div>
-    <div class="im-grid" style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-7) var(--space-5); min-height:calc(100vh - 70px); box-sizing:border-box; display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-7); align-items:center;">
+    <div class="im-grid" style="position:relative; max-width:none; margin:0 auto; padding:var(--space-7) 5vw; min-height:calc(100vh - 70px); box-sizing:border-box; display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-7); align-items:center;">
       <div style="animation:im-fade-up 0.8s var(--ease-out) both;">
         <span style="display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:13px; letter-spacing:var(--tracking-wide); text-transform:uppercase; color:var(--text-energy);">Bioenergética con base científica</span>
         <h1 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-display); line-height:var(--leading-tight); letter-spacing:var(--tracking-tight); color:var(--text-strong); margin:18px 0 0;">Tu cuerpo emite luz.<br>Aprende a <em style="font-style:italic; color:var(--text-accent);">afinarla</em>.</h1>
@@ -130,6 +130,8 @@
       </div>
     </div>
   </section>
+
+  <div id="im-dissolve2" aria-hidden="true" style="height:90vh"></div>
 
   <!-- ============ 2. TRUST / POSITIONING STRIP ============ -->
   <section data-reveal style="border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); background:var(--im-surface-1);">
@@ -377,6 +379,7 @@ class Component extends DCLogic {
   #im-hero-anchor{width:100% !important;height:50vh !important}
   #im-osc-anchor,#im-osc-anchor2{width:100% !important;height:44vh !important}
   #im-dissolve{height:60vh !important}
+  #im-dissolve2{height:55vh !important}
   .im-grid h1{font-size:clamp(1.9rem,8vw,2.6rem) !important}
   section [style*="grid-template-columns:repeat(3,1fr)"]{display:flex !important;flex-direction:column !important;gap:20px !important}
 }
@@ -406,12 +409,12 @@ class Component extends DCLogic {
   }
   function calc(){
     vh = window.innerHeight;
-    var a = cp('im-hero2'), d = cp('im-dissolve'), b = cp('im-osc-anchor'), c = cp('im-osc-anchor2');
+    var a = cp('im-hero2'), d = cp('im-dissolve'), b = cp('im-osc-anchor'), c = cp('im-osc-anchor2'), f = cp('im-dissolve2');
     if(a !== null) P1 = Math.max(a, 0.6);
     if(d !== null) Pd = Math.max(d, P1 + 0.8);
     if(b !== null) P2 = Math.max(b, Pd + 0.6);
     if(c !== null) P3 = Math.max(c, P2 + 0.6);
-    C2 = P3 + 0.8;
+    C2 = (f !== null) ? Math.max(f, P3 + 0.7) : P3 + 0.8;
   }
   calc();
   window.addEventListener('resize', calc, {passive:true});
@@ -419,13 +422,13 @@ class Component extends DCLogic {
   setTimeout(calc, 2000);
   function seg(p,a,b,ea,eb){ return ea + (p-a)/(b-a)*(eb-ea); }
   window.__imMapE = function(p){
-    var B1 = Math.max(P2 - 0.35, Pd + 0.05);
+    var B1 = Pd + 0.25, F = Math.max(P2 - 0.55, Pd + 0.5);
     if(p <= 0) return 0;
     if(p < P1) return seg(p, 0, P1, 0, 1);
     if(p < P1 + 0.2) return 1;
     if(p < Pd) return seg(p, P1 + 0.2, Pd, 1, 2);
     if(p < B1) return seg(p, Pd, B1, 2, 2.2);
-    if(p < P2) return seg(p, B1, P2, 2.2, 2.6);
+    if(p < F) return seg(p, B1, F, 2.2, 2.6);
     if(p < P2 + 0.25) return 2.6;
     if(p < P3) return seg(p, P2 + 0.25, P3, 2.6, 3.6);
     if(p < P3 + 0.2) return 3.6;
