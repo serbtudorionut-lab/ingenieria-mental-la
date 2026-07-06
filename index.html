@@ -43,15 +43,26 @@
     </div>
   </header>
 
-  <!-- ============ 1. HERO ============ -->
+  <!-- ============ 1. HERO (split 1/2) ============ -->
   <section id="top" data-screen-label="Hero" style="position:relative;">
     <div style="position:absolute; top:-160px; right:-120px; width:680px; height:680px; border-radius:50%; background:radial-gradient(circle, rgba(20,124,142,0.32), transparent 62%); pointer-events:none;"></div>
     <div style="position:absolute; top:140px; left:-180px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(244,168,98,0.10), transparent 62%); pointer-events:none;"></div>
-
-    <div style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-9) var(--space-5) var(--space-8); display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-7); align-items:center;">
+    <div class="im-grid" style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-7) var(--space-5); min-height:calc(100vh - 70px); box-sizing:border-box; display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-7); align-items:center;">
       <div style="animation:im-fade-up 0.8s var(--ease-out) both;">
         <span style="display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:13px; letter-spacing:var(--tracking-wide); text-transform:uppercase; color:var(--text-energy);">Bioenergética con base científica</span>
         <h1 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-display); line-height:var(--leading-tight); letter-spacing:var(--tracking-tight); color:var(--text-strong); margin:18px 0 0;">Tu cuerpo emite luz.<br>Aprende a <em style="font-style:italic; color:var(--text-accent);">afinarla</em>.</h1>
+      </div>
+      <div style="display:flex; justify-content:center; position:relative;">
+        <div id="im-hero-anchor" style="position:relative; width:420px; height:420px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 1b. HERO partea 2 (text dreapta, creier stanga) ============ -->
+  <section id="im-hero2" data-reveal style="position:relative;">
+    <div class="im-grid" style="position:relative; max-width:var(--container-max); margin:0 auto; padding:var(--space-7) var(--space-5); min-height:92vh; box-sizing:border-box; display:grid; grid-template-columns:0.95fr 1.05fr; gap:var(--space-7); align-items:center;">
+      <div class="im-spacer" aria-hidden="true"></div>
+      <div>
         <p style="font-size:var(--text-lg); color:var(--text-body); line-height:var(--leading-normal); margin:22px 0 14px; max-width:520px;">En Ingeniería Mental unimos formación y tecnología de biorresonancia para que aprendas a optimizar tu salud energética con método, criterio y base científica.</p>
         <div style="display:flex; gap:14px; margin-top:18px; flex-wrap:wrap;">
           <a href="#dispositivo" style="text-decoration:none;"><x-import component-from-global-scope="IngenierAMentalDesignSystem_af13d6.Button" variant="primary" size="lg" hint-size="auto,52px">Descubrir el dispositivo</x-import></a>
@@ -61,11 +72,6 @@
           <span style="color:var(--im-amber); letter-spacing:2px; font-size:15px;">★★★★★</span>
           <span><strong style="color:var(--text-strong); font-weight:600; font-family:var(--font-heading);">4,9/5</strong> · +2.400 personas afinando su energía</span>
         </div>
-      </div>
-
-      <!-- ancora creier 3D -->
-      <div style="display:flex; justify-content:center; position:relative;">
-        <div id="im-hero-anchor" style="position:relative; width:420px; height:420px;"></div>
       </div>
     </div>
   </section>
@@ -78,18 +84,24 @@
     </div>
   </section>
 
-  <!-- ============ 3. THE DEVICE ============ -->
-  <section id="dispositivo" data-screen-label="Dispositivo" data-reveal style="max-width:var(--container-max); margin:var(--space-9) auto 0; padding:0 var(--space-5);">
-    <div style="display:grid; grid-template-columns:0.92fr 1.08fr; gap:var(--space-8); align-items:center;">
-      <!-- ancora oscilator 3D -->
-      <div style="position:relative; display:flex; justify-content:center;">
-        <div id="im-osc-anchor" style="position:relative; width:320px; height:380px;"></div>
-      </div>
-      <!-- copy -->
+  <!-- ============ 3. THE DEVICE (split 1/2) ============ -->
+  <section id="dispositivo" data-screen-label="Dispositivo" data-reveal style="max-width:var(--container-max); margin:var(--space-8) auto 0; padding:0 var(--space-5);">
+    <div class="im-grid" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:var(--space-8); align-items:center; min-height:92vh;">
       <div>
         <x-import component-from-global-scope="IngenierAMentalDesignSystem_af13d6.Badge" tone="teal" hint-size="auto,26px">Producto estrella</x-import>
         <h2 style="font-family:var(--font-heading); font-weight:600; font-size:var(--text-h2); color:var(--text-strong); margin:16px 0 14px; letter-spacing:var(--tracking-tight);">El Cell Oscillator</h2>
         <p style="color:var(--text-body); line-height:var(--leading-normal); margin:0 0 14px; max-width:520px;">Un dispositivo de uso doméstico que combina <strong style="color:var(--text-strong); font-weight:600;">campos electromagnéticos pulsados (PEMF)</strong>, biofotones y frecuencias programables. Te sientas, eliges un programa y dejas que trabaje: una sesión dura entre <strong style="color:var(--text-strong); font-weight:600;">10 y 25 minutos</strong>. Sin ruido, sin esfuerzo, con parámetros que puedes medir.</p>
+      </div>
+      <div style="position:relative; display:flex; justify-content:center;">
+        <div style="position:absolute; inset:0; background:radial-gradient(circle at 50% 50%, rgba(20,124,142,0.22), transparent 65%); pointer-events:none;"></div>
+        <div id="im-osc-anchor" style="position:relative; width:320px; height:380px;"></div>
+      </div>
+    </div>
+    <div class="im-grid" style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:var(--space-8); align-items:center; min-height:92vh;">
+      <div class="im-spacer2" style="position:relative; display:flex; justify-content:center;">
+        <div id="im-osc-anchor2" style="position:relative; width:320px; height:380px;"></div>
+      </div>
+      <div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:24px 0 26px;">
           <div style="padding:16px; border-radius:var(--radius-md); background:var(--surface-card); border:1px solid var(--border-default);">
             <div style="font-family:var(--font-heading); font-weight:600; color:var(--im-teal-bright); font-size:var(--text-h4); margin-bottom:4px;">Energía</div>
@@ -346,7 +358,18 @@ class Component extends DCLogic {
 }
 </script>
 
-<style>#canvas{position:fixed;inset:0;width:100vw;height:100vh;display:block;z-index:1;pointer-events:none;mix-blend-mode:screen}</style>
+<style>
+#canvas{position:fixed;inset:0;width:100vw;height:100vh;display:block;z-index:1;pointer-events:none;mix-blend-mode:screen}
+.im-spacer{height:0}
+@media (max-width:900px){
+  .im-grid{display:flex !important;flex-direction:column !important;gap:28px !important;min-height:0 !important;padding-top:36px;padding-bottom:36px}
+  .im-spacer{height:46vh}
+  #im-hero-anchor{width:100% !important;height:50vh !important}
+  #im-osc-anchor,#im-osc-anchor2{width:100% !important;height:44vh !important}
+  .im-grid h1{font-size:clamp(1.9rem,8vw,2.6rem) !important}
+  section [style*="grid-template-columns:repeat(3,1fr)"]{display:flex !important;flex-direction:column !important;gap:20px !important}
+}
+</style>
 <canvas id="canvas"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://unpkg.com/fflate@0.7.4/umd/index.js"></script>
@@ -363,38 +386,34 @@ class Component extends DCLogic {
 <script>
 
 (function(){
-  var vh = window.innerHeight, pEnd = 1.6;
+  var vh = window.innerHeight, P1 = 1, P2 = 2.2, P3 = 3.4, P4 = 4.3;
+  function cp(id){
+    var el = document.getElementById(id);
+    if(!el) return null;
+    var r = el.getBoundingClientRect();
+    return (r.top + window.scrollY + r.height/2 - 0.5*vh)/vh;
+  }
   function calc(){
     vh = window.innerHeight;
-    var el = document.getElementById('im-osc-anchor') || document.getElementById('dispositivo');
-    if(el){
-      var r = el.getBoundingClientRect();
-      var center = r.top + window.scrollY + r.height/2;
-      pEnd = Math.max((center - 0.5*vh)/vh, 1.05);
-    }
+    var a = cp('im-hero2'), b = cp('im-osc-anchor'), c = cp('im-osc-anchor2');
+    if(a !== null) P1 = Math.max(a, 0.6);
+    if(b !== null) P2 = Math.max(b, P1 + 0.8);
+    if(c !== null) P3 = Math.max(c, P2 + 0.6);
+    P4 = P3 + 0.9;
   }
   calc();
   window.addEventListener('resize', calc, {passive:true});
   window.addEventListener('load', calc);
   setTimeout(calc, 2000);
+  function seg(p,a,b,ea,eb){ return ea + (p-a)/(b-a)*(eb-ea); }
   window.__imMapE = function(p){
-    var a = Math.min(0.9, 0.5*pEnd);
-    var b = a + (pEnd - a)*0.55;
     if(p <= 0) return 0;
-    if(p < a) return p/a;
-    if(p < b) return 1 + (p-a)/(b-a)*1.2;
-    if(p < pEnd) return 2.2 + (p-b)/(pEnd-b)*1.4;
-    return 3.6;
+    if(p < P1) return seg(p, 0, P1, 0, 1);
+    if(p < P2) return seg(p, P1, P2, 1, 2.6);
+    if(p < P3) return seg(p, P2, P3, 2.6, 3.6);
+    if(p < P4) return seg(p, P3, P4, 3.6, 4.6);
+    return 4.6;
   };
-  var cv = document.getElementById('canvas');
-  function tick(){
-    var p = window.scrollY/vh;
-    var f = 1 - Math.min(Math.max((p - (pEnd + 0.7))/0.6, 0), 1);
-    cv.style.opacity = f;
-    cv.style.display = f <= 0 ? 'none' : 'block';
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
 })();
 
 /* Dala brain — faithful 1:1 port (three r128) */
@@ -776,15 +795,15 @@ class Cones extends THREE.Object3D{
   }
   _updatePosition(){
     const e=(window.__imMapE?window.__imMapE(u.sectionProgress):u.sectionProgress);
-    const t=zt(Ut(e,0,1,3,-4.5),-4.5,3)+zt(Ut(e,1.25,1.5,0,5),0,5)+zt(Ut(e,1.8,2.2,0,2.9),0,2.9)-zt(Ut(e,3,3.6,0,6.8),0,6.8);
+    const t=zt(Ut(e,0,1,3,-4.5),-4.5,3)+zt(Ut(e,1.25,1.5,0,5),0,5)+zt(Ut(e,1.8,2.2,0,2.9),0,2.9)-zt(Ut(e,3,3.6,0,6.8),0,6.8)+zt(Ut(e,4,4.6,0,3.4),0,3.4);
     this._params.basePosition.x=t*(u.xf||1)+0*this._material.customUniforms[10].value.x;
     const n=0;
     this._params.basePosition.y=n+0*this._material.customUniforms[10].value.y;
-    const i=zt(Ut(e,1.1,2,0,1),0,1)-zt(Ut(e,2.2,2.6,0,1),0,1);
+    const i=zt(Ut(e,1.1,2,0,1),0,1)-zt(Ut(e,2.2,2.6,0,1),0,1)+zt(Ut(e,4,4.6,0,1),0,1);
     this._material.customUniforms[13].value+=(i-this._material.customUniforms[13].value)*this._easing;
     this._simulationPos.material.uniforms.u_explode.value+=(i-this._simulationPos.material.uniforms.u_explode.value)*this._easing;
     this._simulationSpring.material.uniforms.u_explode.value+=(i-this._simulationSpring.material.uniforms.u_explode.value)*this._easing;
-    const r=this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3);
+    const r=this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3)-zt(Ut(e,4,4.6,0,.35),0,.35);
     this._material.customUniforms[3].value+=(r-this._material.customUniforms[3].value)*this._easing;
     this._simulationPos.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
     this._simulationSpring.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
