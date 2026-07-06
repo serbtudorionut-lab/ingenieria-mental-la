@@ -131,7 +131,7 @@
     </div>
   </section>
 
-  <div id="im-dissolve2" aria-hidden="true" style="height:90vh"></div>
+  <div id="im-dissolve2" aria-hidden="true" style="height:55vh"></div>
 
   <!-- ============ 2. TRUST / POSITIONING STRIP ============ -->
   <section data-reveal style="border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); background:var(--im-surface-1);">
@@ -379,7 +379,7 @@ class Component extends DCLogic {
   #im-hero-anchor{width:100% !important;height:50vh !important}
   #im-osc-anchor,#im-osc-anchor2{width:100% !important;height:44vh !important}
   #im-dissolve{height:60vh !important}
-  #im-dissolve2{height:55vh !important}
+  #im-dissolve2{height:35vh !important}
   .im-grid h1{font-size:clamp(1.9rem,8vw,2.6rem) !important}
   section [style*="grid-template-columns:repeat(3,1fr)"]{display:flex !important;flex-direction:column !important;gap:20px !important}
 }
@@ -414,7 +414,7 @@ class Component extends DCLogic {
     if(d !== null) Pd = Math.max(d, P1 + 0.8);
     if(b !== null) P2 = Math.max(b, Pd + 0.6);
     if(c !== null) P3 = Math.max(c, P2 + 0.6);
-    C2 = (f !== null) ? Math.max(f, P3 + 0.7) : P3 + 0.8;
+    C2 = P3 + 0.55;
   }
   calc();
   window.addEventListener('resize', calc, {passive:true});
@@ -431,8 +431,7 @@ class Component extends DCLogic {
     if(p < F) return seg(p, B1, F, 2.2, 2.6);
     if(p < P2 + 0.25) return 2.6;
     if(p < P3) return seg(p, P2 + 0.25, P3, 2.6, 3.6);
-    if(p < P3 + 0.2) return 3.6;
-    if(p < C2) return seg(p, P3 + 0.2, C2, 3.6, 4.6);
+    if(p < C2) return seg(p, P3, C2, 3.6, 4.6);
     return 4.6;
   };
 })();
@@ -824,11 +823,11 @@ class Cones extends THREE.Object3D{
     this._material.customUniforms[13].value+=(i-this._material.customUniforms[13].value)*this._easing;
     this._simulationPos.material.uniforms.u_explode.value+=(i-this._simulationPos.material.uniforms.u_explode.value)*this._easing;
     this._simulationSpring.material.uniforms.u_explode.value+=(i-this._simulationSpring.material.uniforms.u_explode.value)*this._easing;
-    const r=this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3)-zt(Ut(e,4,4.6,0,.3),0,.3);
+    const r=this._factor+zt(Ut(e,0,1,0,1),0,1)-zt(Ut(e,1.25,1.5,0,1),0,1)+zt(Ut(e,2.2,2.6,0,.3),0,.3)-zt(Ut(e,4,4.6,0,1),0,1);
     this._material.customUniforms[3].value+=(r-this._material.customUniforms[3].value)*this._easing;
     this._simulationPos.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
     this._simulationSpring.material.uniforms.u_factor.value+=(r-this._simulationPos.material.uniforms.u_factor.value)*this._easing;
-    const o=zt(Ut(e,1.8,2.2,0,2),0,2)-zt(Ut(e,4,4.6,0,1),0,1);
+    const o=zt(Ut(e,1.8,2.2,0,2),0,2)+zt(Ut(e,4,4.6,0,1),0,1);
     this._material.customUniforms[14].value+=(o-this._material.customUniforms[14].value)*this._easing;
     this._simulationPos.material.uniforms.u_progress.value+=(o-this._simulationPos.material.uniforms.u_progress.value)*this._easing;
     this._simulationSpring.material.uniforms.u_progress.value+=(o-this._simulationSpring.material.uniforms.u_progress.value)*this._easing;
