@@ -429,7 +429,7 @@ class Component extends DCLogic {
     if(p < Pd) return seg(p, P1 + 0.2, Pd, 1, 2);
     if(p < B1) return seg(p, Pd, B1, 2, 2.2);
     if(p < F) return seg(p, B1, F, 2.2, 2.6);
-    if(p < P3) return seg(p, F, P3, 2.6, 3.6);
+    if(p < P3) return seg(p, F, P3, 2.95, 3.6);
     if(p < C2) return seg(p, P3, C2, 3.6, 4.6);
     return 4.6;
   };
